@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Fooc</title>
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              PATEE 
+            </span>
+          </a>
+          <div class="" id="">
+            <div class="User_option">
+             
+              <a href="">
+                <img src="{% static 'images/bag.png' %}" alt="">
+              </a>
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'product' %}">Products</a>
+                <a href="{% url 'blog' %}">Blog</a>
+                <a href="{% url 'contact' %}">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Our Product
+              </h2>
+            </div>
+            <p>
+              *Smell Irresistible, All Day Long! 💫*  
+
+              Welcome to PATEE ESSENCE where luxury meets *long-lasting fragrance*! Our *premium perfume oils* are crafted to keep you smelling divine from *day to night*—no alcohol, no fillers, just pure, captivating scent.  
+              
+              🔥 *Why You'll Love Our Perfume Oils:*  
+              ✔ *12+ hours lasting power* – Because your scent should stay, not fade!  
+              ✔ *Alcohol-free & skin-friendly* – Pure fragrance, no harsh chemicals.  
+              ✔ *Inspired by luxury brands* – Get the designer scent without the designer price!  
+              ✔ *Pocket-sized & powerful* – Take your signature scent anywhere!  
+              
+              💖 *Smell unforgettable. Feel unstoppable.*  
+              Shop now & find your *signature scent* today! 🛒✨  
+              
+              
+              
+              Let me know if you want any tweaks! 🚀🔥            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="info_social-container">
+        <h5>
+          Follow Us
+        </h5>
+        <div class="info_social">
+          <div>
+            <a href="">
+              <img src="images/facebook-logo-button.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="images/twitter-logo-button.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="images/linkedin.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <img src="images/instagram.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h6>
+            About PATEE ESSENCE
+          </h6>
+          <p>
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u
+          </p>
+        </div>
+        <div class="col-md-2 offset-lg-1">
+          <h6>
+            Menus
+          </h6>
+          {% load static %}
+          <ul>
+              <li class="active">
+                  <a href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                  <a href="{% url 'about' %}">About</a>
+              </li>
+              <li>
+                  <a href="{% url 'product' %}">Products</a>
+              </li>
+              <li>
+                  <a href="{% url 'blog' %}">Blog</a>
+              </li>
+              <li>
+                  <a href="{% url 'contact' %}">Contact Us</a>
+              </li>
+          </ul>
+          
+      
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Useful Links
+          </h6>
+          <ul>
+            <li>
+              <a href="">
+                Adipiscing
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Elit, sed
+              </a>
+            </li>
+            <li>
+              <a href="">
+                do Eiusmod
+              </a>
+            </li>
+            <li>
+              <a href="">
+                Tempor
+              </a>
+            </li>
+            <li>
+              <a href="">
+                incididunt
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3">
+          <h6>
+            Contact Us
+          </h6>
+          <div class="info_link-box">
+            
+            <a href="">
+              <img src="{% static 'images/call-white.png' %}" alt="">
+              <span>+234 9059387962</span>
+            </a>
+            <a href="">
+              <img src="{% static 'images/mail-white.png' %}" alt="">
+              <span> pateeessence@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+  
+
+</body>
+
+</html>
