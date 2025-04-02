@@ -1666,16 +1666,16 @@ pre code {
 .table-warning td,
 .table-warning thead th,
 .table-warning tbody + tbody {
-  border-color: #ffdf7e;
+  border-color:  pink;
 }
 
 .table-hover .table-warning:hover {
-  background-color: #ffe8a1;
+  background-color:  pink;
 }
 
 .table-hover .table-warning:hover > td,
 .table-hover .table-warning:hover > th {
-  background-color: #ffe8a1;
+  background-color:  pink;
 }
 
 .table-danger,

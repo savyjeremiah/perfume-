@@ -17,9 +17,20 @@ def contact(request):
 
 
 
-def product(request):
-    perfumes = Perfume.objects.all()
-    return render(request, 'product.html', {'perfumes': perfumes})  
+
+
+def product(request):  # Renamed function to avoid confusion
+    Designers_Perfume_Oil = Perfume.objects.filter(category='Designers Perfume Oil')
+    Suratti_Perfume_Oils = Perfume.objects.filter(category='Suratti Perfume Oils')
+    Naseem_Oils = Perfume.objects.filter(category='Naseem Oils')
+
+    context = {
+        'Designers_Perfume_Oil': Designers_Perfume_Oil,
+        'Suratti_Perfume_Oils': Suratti_Perfume_Oils,
+        'Naseem_Oils': Naseem_Oils,
+    }
+    return render(request, 'product.html', context)  # Fixed template name
+
 
 from .models import SearchEngine
 

@@ -1,6 +1,6 @@
 $white: #ffffff;
 $black: #000000;
-$primary1: #e7cd20;
+$primary1:  pink;
 $btn-black: #363636;
 
 @mixin main-font {
@@ -78,7 +78,7 @@ body {
       left: 0;
       width: 135px;
       height: 2px;
-      background-color: #f6db26;
+      background-color:  pink;
     }
   }
 }
@@ -99,7 +99,7 @@ body {
   .hero_area {
     height: auto;
     background: none;
-    background-color: #e7cd20;
+    background-color:  pink;
   }
 
   .custom_menu-btn button span {
@@ -303,7 +303,7 @@ a:focus {
   top: 0;
   left: 0;
   background-color: rgb(0, 0, 0);
-  background-color: rgba($color: #e7cd20, $alpha: 0.95);
+  background-color: rgba($color:  pink, $alpha: 0.95);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -484,12 +484,12 @@ a:focus {
         h4 {
           span {
             font-weight: bold;
-            color: #eed423;
+            color:  pink;
           }
         }
 
         a {
-          color: #eed423;
+          color:  pink;
           font-weight: bold;
           text-decoration: underline;
         }
@@ -513,7 +513,7 @@ a:focus {
 // about section
 
 .about_section {
-  background-color: #e7cd20;
+  background-color:  pink;
   position: relative;
   overflow-x: hidden;
   .row {

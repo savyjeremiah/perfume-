@@ -1,16 +1,24 @@
 from django.db import models
 
-
 class Perfume(models.Model):
-    name = models.CharField(max_length=200)
-    size = models.CharField(max_length=100)  # Singular form for clarity
-    group = models.CharField(max_length=100)  # Renamed for clarity
+    CATEGORY_CHOICES = [
+        ('Designers Perfume Oil', 'Designers Perfume Oil'),
+        ('Suratti Perfume Oils', 'Suratti Perfume Oils'),
+        ('Naseem Oils', 'Naseem Oils'),
+    ]
+    
+    name = models.CharField(max_length=255)
+    category = models.CharField(max_length=150, choices=CATEGORY_CHOICES)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='perfume_images/', blank=True, null=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)  # Better for currency
+    available = models.BooleanField(default=True)
+    grams = models.DecimalField(max_digits=5, decimal_places=2, default=0.00, help_text="Weight of the product in grams")
+
+    class Meta:
+        verbose_name_plural = "Perfumes"
 
     def __str__(self):
         return self.name
-
 
 class SearchEngine(models.Model):
     search_term = models.CharField(max_length=200)
