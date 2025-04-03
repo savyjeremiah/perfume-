@@ -1,302 +1,286 @@
 <!DOCTYPE html>
-{% load static %}
-<html>
+<html lang="en">
+    {% load static %}
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <head>
+        <meta charset="utf-8">
+        <title>Patee Essence</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
 
-  <title>PATEE ESSENCE</title>
-
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
-</head>
-
-<body class="sub_page">
-  <div class="hero_area ">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="#">
-            <p>
-              <img src="{% static 'images/sent.jpeg' %}"  width="120px">
-            </p>
-          </a>
-          <div class="" id="">
-            <div class="User_option">
-             
-              <a href="">
-                <img src="images/bag.png" width="" alt="">
-              </a>
-            </div>
-
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1">
-
-                </span>
-                <span class="s-2">
-
-                </span>
-                <span class="s-3">
-
-                </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="{% url 'index' %}">Home</a>
-                <a href="{% url 'about' %}">About</a>
-                <a href="{% url 'product' %}">Products</a>
-                <a href="{% url 'blog' %}">Blog</a>
-                <a href="{% url 'contact' %}">Contact Us</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-  <!-- product section -->
-<!-- Product Section -->
-<section class="product_section layout_padding">
-  <div class="container">
-    <div class="heading_containe">
-      <h2>Designers Perfume Oil</h2>
-    </div>
-    <div class="product_container">
-      {% for product in Designers_Perfume_Oil %}
-        <div class="box">
-          <div class="img-box">
-            {% if product.image %}
-              <img src="{{ product.image.url }}" alt="{{ product.name }}" style="border-radius: 40px;" width="300px">
-            {% else %}
-              <img src="/static/images/default.jpg" alt="No Image Available" style="border-radius: 40px;" width="300px">
-            {% endif %}
-          </div>
-          <div class="detail-box">
-            <h5>{{ product.name }}</h5>
-            <h4><span>₦{{ product.price }}</span></h4>
-            <a href="http://api.whatsapp.com/send?phone=2348066888984">Buy Now</a>
-          </div>
-        </div>
-      {% empty %}
-        <p>No perfumes available.</p>
-      {% endfor %}
-    </div>
-    
-   
-  </div>
-</section>
-
-
-
-<section class="product_section layout_padding">
-  <div class="container">
-    <div class="heading_containe">
-      <h2>Suratti Perfume Oils</h2>
-    </div>
-    <div class="product_container">
-      {% for product in Suratti_Perfume_Oils %}
-        <div class="box">
-          <div class="img-box">
-            {% if product.image %}
-              <img src="{{ product.image.url }}" alt="{{ product.name }}" style="border-radius: 40px;" width="300px">
-            {% else %}
-              <img src="/static/images/default.jpg" alt="No Image Available" style="border-radius: 40px;" width="300px">
-            {% endif %}
-          </div>
-          <div class="detail-box">
-            <h5>{{ product.name }}</h5>
-            <h4><span>₦{{ product.price }}</span></h4>
-            <a href="http://api.whatsapp.com/send?phone=2348066888984">Buy Now</a>
-          </div>
-        </div>
-      {% empty %}
-        <p>No perfumes available.</p>
-      {% endfor %}
-    </div>
-    
-    
-  </div>
-</section>
-  
-
-<section class="product_section layout_padding">
-  <div class="container">
-    <div class="heading_containe">
-     
-      <h2>Naseem Oils</h3>
-    </div>
-    <div class="product_container">
-      {% for product in Naseem_Oils %}
-        <div class="box">
-          <div class="img-box">
-            {% if product.image %}
-              <img src="{{ product.image.url }}" alt="{{ product.name }}" style="border-radius: 40px;" width="300px">
-            {% else %}
-              <img src="/static/images/default.jpg" alt="No Image Available" style="border-radius: 40px;" width="300px">
-            {% endif %}
-          </div>
-          <div class="detail-box">
-            <h5>{{ product.name }}</h5>
-            <h4><span>₦{{ product.price }}</span></h4>
-            <a href="http://api.whatsapp.com/send?phone=2348066888984">Buy Now</a>
-          </div>
-        </div>
-      {% empty %}
-        <p>No perfumes available.</p>
-      {% endfor %}
-    </div>
-    
-    
-  </div>
-</section>
-  
-
-  <!-- end product section -->
-
-  <!-- info section -->
-
-  <section class="info_section layout_padding">
-    <div class="container">
-      <div class="info_social-container">
-        <h5>
-          Follow Us
-        </h5>
-        <div class="info_social">
-          <div>
-            <a href="https://www.facebook.com/share/15uq7poUKL/">
-              <img src="{% static 'images/facebook-logo-button.png' %}" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="https://x.com/pateeessence?t=0ERRfr8OyXSWryDSw9Nn-w&s=09">
-              <img src="{% static 'images/twitter-logo-button.png' %}" alt="">
-            </a>
-          </div>
-         
-          <div>
-            <a href="https://www.instagram.com/patee_essence?igsh=dnluN2tqZTdpaGM3">
-              <img src="{% static 'images/instagram.png' %}" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <h6>
-            About FOOC
-          </h6>
-          <p>
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u
-          </p>
-        </div>
-        <div class="col-md-2 offset-lg-1">
-          <h6>
-            Menus
-          </h6>
-         
-          <ul>
-              <li class="active">
-                  <a href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li>
-                  <a href="{% url 'about' %}">About</a>
-              </li>
-              <li>
-                  <a href="{% url 'product' %}">Products</a>
-              </li>
-              <li>
-                  <a href="{% url 'blog' %}">Blog</a>
-              </li>
-              <li>
-                  <a href="{% url 'contact' %}">Contact Us</a>
-              </li>
-          </ul>
-          
-        </div>
-        <div class="col-md-3">
-          <h6>
-            Useful Links
-          </h6>
-          <ul>
-            <li>
-              <a href="">
-                Adipiscing
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Elit, sed
-              </a>
-            </li>
-            <li>
-              <a href="">
-                do Eiusmod
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Tempor
-              </a>
-            </li>
-            <li>
-              <a href="">
-                incididunt
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4 col-lg-3">
-          <h6>
-            Contact Us
-          </h6>
-         
-          <div class="info_link-box">
-            
-            <a href="">
-              <img src="{% static 'images/call-white.png' %}" alt="">
-              <span>+234 8066888984</span>
-            </a>
-            <a href="">
-              <img src="{% static 'images/mail-white.png' %}" alt="">
-              <span> pateeessence@gmail.com</span>
-            </a>
-          </div>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
         
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        
+        <!-- Libraries Stylesheet -->
+        <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+        <!-- Spinner End -->
 
-  <!-- end info section -->
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="text-primary"><i class="fas fa-hand-holding-water me-3"></i>Patee Essence</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+                        <a href="{% url 'service' %}" class="nav-item nav-link">Service</a>
+                        <a href="{% url 'blog' %}" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown active">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="{% url 'feature' %}" class="dropdown-item">Our Feature</a>
+                                <a href="{% url 'product' %}" class="dropdown-item">Our Product</a>
+                              
+                                <a href="{% url 'error_404' %}" class="dropdown-item active">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-none d-xl-flex me-3">
+                        <div class="d-flex flex-column pe-3 border-end border-primary">
+                            <span class="text-body">Get Free Delivery</span>
+                            <a href="tel:+4733378901"><span class="text-primary">Free: + 0123 456 7890</span></a>
+                        </div>
+                    </div>
+                    <a href="" class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4">Order Now</a>
+                </div>
+            </nav>
 
+            <!-- Header Start -->
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Products</h4>
+                    <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active text-primary">Product</li>
+                    </ol>    
+                </div>
+            </div>
+            <!-- Header End -->
+        </div>
+        <!-- Navbar & Hero End -->
 
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text btn border p-3"><i class="fa fa-search text-white"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
 
-  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
-  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-  
+        
+        <!-- Products Start -->
+        <div class="container-fluid product py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                   
+                    <h1 class="display-3 text-capitalize mb-3">Designers_Perfume_Oil</h1>
+                </div>
 
-</body>
+                <div class="row g-4 justify-content-center">
+                    {% for perfume in Designers_Perfume_Oil %}
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="product-item">
+                            <img src="{{ perfume.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ perfume.name }}">
+                            <div class="product-content bg-light text-center rounded-bottom p-4">
+                                <p>grams : {{ perfume.grams  }}</p>
+                                <a href="#" class="h4 d-inline-block mb-3">{{ perfume.name }}</a>
+                                <p class="fs-4 text-primary mb-3">Price: ₦{{ perfume.price }}</p>
+                                <a href="http://api.whatsapp.com/send?phone=2348066888984" class="btn btn-secondary rounded-pill py-2 px-4">Get</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p class="text-center">No products available.</p>
+                    {% endfor %}
+                </div>
+                
+                    
+                
+            </div>
+        </div>
+        <!-- Products End -->
+
+         <!-- Footer Start -->
+          <!-- Products Start -->
+        <div class="container-fluid product py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+              
+                    <h1 class="display-3 text-capitalize mb-3">Suratti_Perfume_Oils</h1>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    {% for perfume in Suratti_Perfume_Oils %}
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="product-item">
+                            <img src="{{ perfume.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ perfume.name }}">
+                            <div class="product-content bg-light text-center rounded-bottom p-4">
+                                <p>grams :{{ perfume.grams  }}</p>
+                                <a href="#" class="h4 d-inline-block mb-3">{{ perfume.name }}</a>
+                                <p class="fs-4 text-primary mb-3">₦{{ perfume.price }}</p>
+                                <a href="http://api.whatsapp.com/send?phone=2348066888984" class="btn btn-secondary rounded-pill py-2 px-4">Get</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+        <!-- Products End -->
+
+         <!-- Footer Start -->
+          <!-- Products Start -->
+          <div class="container-fluid product py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h1 class="display-3 text-capitalize mb-3">Naseem Oils</h1>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    {% for perfume in Naseem_Oils %}
+                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="product-item">
+                            <img src="{{ perfume.image.url }}" class="img-fluid w-100 rounded-top" alt="{{ perfume.name }}">
+                            <div class="product-content bg-light text-center rounded-bottom p-4">
+                                <p>grams :{{ perfume.grams  }}</p>
+                                <a href="#" class="h4 d-inline-block mb-3">{{ perfume.name }}</a>
+                                <p class="fs-4 text-primary mb-3">₦{{ perfume.price }}</p>
+                                <a href="http://api.whatsapp.com/send?phone=2348066888984" class="btn btn-secondary rounded-pill py-2 px-4">Get</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <!-- Products End -->
+
+         <!-- Footer Start -->
+         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5 mb-5 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="position-relative mx-auto">
+                            <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Email address to Subscribe">
+                            <button type="button" class="btn btn-secondary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-secondary btn-md-square rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <div class="footer-item">
+                                <h3 class="text-white mb-4"><i class="fas fa-hand-holding-water text-primary me-3"></i>Patee Essence</h3>
+                                <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="position-relative">
+                                <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                                <button type="button" class="btn btn-secondary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">About Us</h4>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Why Choose Us</a>
+                           
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+                            <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Business Hours</h4>
+                            <div class="mb-3">
+                                <h6 class="text-muted mb-0">Mon - Sunday:</h6>
+                                <p class="text-white mb-0">09.00 am to 07.00 pm</p>
+                            </div>
+                           
+                            <div class="mb-3">
+                                <h6 class="text-muted mb-0">Vacation:</h6>
+                                <p class="text-white mb-0">All Sunday is our vacation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="mailto:info@example.com"><i class="fas fa-envelope me-2"></i>pateessence@gmail.com</a>
+                            <a href="tel:+012 345 67890"><i class="fas fa-phone me-2"></i> +2340866888984</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Library Scripts -->
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    </body>
 
 </html>
